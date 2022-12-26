@@ -11,7 +11,8 @@ import React from 'react'
 
 // Local libraries
 import GetBalance from '../balance'
-import Placeholder2 from '../placeholder2'
+// import Placeholder2 from '../placeholder2'
+import BTCPrice from '../btc'
 import Placeholder3 from '../placeholder3'
 import ServerSelectView from '../servers/select-server-view'
 
@@ -48,7 +49,7 @@ class AppBody extends React.Component {
       case 0:
         return (<GetBalance wallet={this.state.wallet} />)
       case 1:
-        return (<Placeholder2 />)
+        return (<BTCPrice />)
       case 2:
         return (<Placeholder3 />)
 
