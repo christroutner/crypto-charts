@@ -7,7 +7,8 @@ import { useEffect } from 'react'
 import { Chart } from 'chart.js/auto'
 
 // import priceData from './btc-price-data.json'
-import priceData from './hybrid-data.json'
+// import priceData from './hybrid-data.json'
+import priceData from './btc-price-2010-2022.json'
 
 
 function BTCPrice (props) {
@@ -20,7 +21,8 @@ function BTCPrice (props) {
       // return date.toLocaleString()
       return dateStr
     })
-    const data = priceData.map(x => parseFloat(x.close))
+    // const data = priceData.map(x => parseFloat(x.close))
+    const data = priceData.map(x => parseFloat(x.price))
 
 
     const ctx = document.getElementById('btc1');

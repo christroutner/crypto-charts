@@ -8,7 +8,8 @@ import { Chart } from 'chart.js/auto'
 import boll from 'bollinger-bands'
 
 // import priceData from './btc-price-data.json'
-import priceData from './hybrid-data.json'
+// import priceData from './hybrid-data.json'
+import priceData from './btc-price-2010-2022.json'
 
 
 function BTCPrice2 (props) {
@@ -23,7 +24,8 @@ function BTCPrice2 (props) {
       // return date.toLocaleString()
       return dateStr
     })
-    const data = priceData.map(x => parseFloat(x.close))
+    // const data = priceData.map(x => parseFloat(x.close))
+    const data = priceData.map(x => parseFloat(x.price))
 
     // Generate bollinger bands
     const bollOut = boll(data, 200, 2)

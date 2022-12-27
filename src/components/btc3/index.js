@@ -8,7 +8,8 @@ import { Chart } from 'chart.js/auto'
 import regression from 'regression'
 
 // import priceData from './btc-price-data.json'
-import priceData from './hybrid-data.json'
+// import priceData from './hybrid-data.json'
+import priceData from './btc-price-2010-2022.json'
 
 
 function BTCPrice3 (props) {
@@ -21,7 +22,8 @@ function BTCPrice3 (props) {
       // return date.toLocaleString()
       return dateStr
     })
-    const data = priceData.map(x => parseFloat(x.close))
+    // const data = priceData.map(x => parseFloat(x.close))
+    const data = priceData.map(x => parseFloat(x.price))
     // console.log('data: ', data)
 
     // Transform price data with a log
