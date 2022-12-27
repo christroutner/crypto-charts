@@ -13,7 +13,8 @@ import React from 'react'
 import GetBalance from '../balance'
 // import Placeholder2 from '../placeholder2'
 import BTCPrice from '../btc'
-import Placeholder3 from '../placeholder3'
+// import Placeholder3 from '../placeholder3'
+import BTCPrice2 from '../btc2'
 import ServerSelectView from '../servers/select-server-view'
 
 // let _this
@@ -51,7 +52,7 @@ class AppBody extends React.Component {
       case 1:
         return (<BTCPrice />)
       case 2:
-        return (<Placeholder3 />)
+        return (<BTCPrice2 />)
 
       // Special Views
       case 100:

@@ -9,6 +9,7 @@ import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
+  LogarithmicScale,
   PointElement,
   LineElement,
   Title,
@@ -22,6 +23,7 @@ console.log('priceData: ', priceData)
 ChartJS.register(
   CategoryScale,
   LinearScale,
+  LogarithmicScale,
   PointElement,
   LineElement,
   Title,
@@ -58,6 +60,15 @@ function BTCPrice (props) {
       title: {
         display: true,
         text: 'Chart.js Line Chart'
+      },
+      scales: {
+        x: {
+          display: true
+        },
+        y: {
+          display: true,
+          type: 'logarithmic'
+        }
       }
     }
   }

@@ -35,7 +35,7 @@ class NavMenu extends React.Component {
             <Nav className='mr-auto'>
               <Nav.Link href='#' onClick={() => this.handleClickEvent(0)}>Check Balance</Nav.Link>
               <Nav.Link href='#' onClick={() => this.handleClickEvent(1)}>BTC</Nav.Link>
-              <Nav.Link href='#' onClick={() => this.handleClickEvent(2)}>Placeholder 3</Nav.Link>
+              <Nav.Link href='#' onClick={() => this.handleClickEvent(2)}>BTC2</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
