@@ -34,8 +34,9 @@ class NavMenu extends React.Component {
           <Navbar.Collapse id='responsive-navbar-nav'>
             <Nav className='mr-auto'>
               <Nav.Link href='#' onClick={() => this.handleClickEvent(0)}>Check Balance</Nav.Link>
-              <Nav.Link href='#' onClick={() => this.handleClickEvent(1)}>BTC</Nav.Link>
-              <Nav.Link href='#' onClick={() => this.handleClickEvent(2)}>BTC2</Nav.Link>
+              <Nav.Link href='#' onClick={() => this.handleClickEvent(1)}>BTC - Raw Price</Nav.Link>
+              <Nav.Link href='#' onClick={() => this.handleClickEvent(2)}>BTC - Log Scale Bollinger Bands</Nav.Link>
+              <Nav.Link href='#' onClick={() => this.handleClickEvent(3)}>BTC - Log Regression</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

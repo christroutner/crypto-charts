@@ -15,6 +15,7 @@ import GetBalance from '../balance'
 import BTCPrice from '../btc'
 // import Placeholder3 from '../placeholder3'
 import BTCPrice2 from '../btc2'
+import BTCPrice3 from '../btc3'
 import ServerSelectView from '../servers/select-server-view'
 
 // let _this
@@ -53,6 +54,8 @@ class AppBody extends React.Component {
         return (<BTCPrice />)
       case 2:
         return (<BTCPrice2 />)
+      case 3:
+        return (<BTCPrice3 />)
 
       // Special Views
       case 100:

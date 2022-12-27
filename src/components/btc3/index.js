@@ -10,7 +10,7 @@ import { Chart } from 'chart.js/auto'
 import priceData from './hybrid-data.json'
 
 
-function BTCPrice (props) {
+function BTCPrice3 (props) {
 
   useEffect(() => {
     // Generate date strings.
@@ -21,9 +21,13 @@ function BTCPrice (props) {
       return dateStr
     })
     const data = priceData.map(x => parseFloat(x.close))
+    console.log('data: ', data)
 
+    // Transform price data with a log
+    const logData = data.map(x => Math.log10(x))
+    console.log('logData: ', logData)
 
-    const ctx = document.getElementById('btc1');
+    const ctx = document.getElementById('btc3');
 
     new Chart(ctx, {
       type: 'line',
@@ -32,7 +36,7 @@ function BTCPrice (props) {
         datasets: [
           {
             label: 'BTC Price',
-            data,
+            data: logData,
             borderWidth: 1
           }
         ]
@@ -54,10 +58,10 @@ function BTCPrice (props) {
 
   return (
     <>
-      <canvas id="btc1"></canvas>
+      <canvas id="btc3"></canvas>
     </>
   )
 }
 
 
-export default BTCPrice
+export default BTCPrice3
