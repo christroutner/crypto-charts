@@ -16,7 +16,12 @@ function BTCPrice2 (props) {
   useEffect(() => {
     console.log('hello world')
 
-    const labels = priceData.map(x => x.date)
+    const labels = priceData.map(x => {
+      const date = new Date(x.date)
+      const dateStr = `${date.getMonth()+1}-${date.getDate()}-${date.getFullYear()}`
+      // return date.toLocaleString()
+      return dateStr
+    })
     const data = priceData.map(x => parseFloat(x.close))
 
 
